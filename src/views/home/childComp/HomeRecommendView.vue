@@ -1,14 +1,17 @@
 <template>
   <div>
     <div class="recommend">
-      <div v-for="item in category" :key="item" class="recommend-item">
+      <div
+        v-for="(item, index) in category"
+        :key="index"
+        class="recommend-item"
+      >
         <a href="">
           <img :src="item.image" alt="" />
           <div>{{ item.mallCategoryName }}</div>
         </a>
       </div>
     </div>
-    <div class="div1"></div>
   </div>
 </template>
 
@@ -31,7 +34,7 @@ export default {
   display: flex;
   background-color: #fff;
   padding: 8px 0;
-  margin: 5px;
+  margin: 5px 5px 10px;
 
   border-radius: 8px;
 }
@@ -44,9 +47,5 @@ export default {
 .recommend-item img {
   width: 60px;
   height: 60px;
-}
-.div1 {
-  width: 100%;
-  height: 20px;
 }
 </style>

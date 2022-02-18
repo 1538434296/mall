@@ -7,49 +7,48 @@
 </template>
 
 <script>
-  export default {
-    name: "TabBarItem",
-    props: {
-      path: String,
-      activeColor: {
-        type: String,
-        default: 'red'
-      }
+export default {
+  name: "TabBarItem",
+  props: {
+    path: String,
+    activeColor: {
+      type: String,
+      default: "#D4237A",
     },
-    data() {
-      return {
-        // isActive: true,
-      }
+  },
+  data() {
+    return {
+      // isActive: true,
+    };
+  },
+  computed: {
+    isActive() {
+      return this.$route.path.indexOf(this.path) !== -1;
     },
-    computed: {
-      isActive() {
-        return this.$route.path.indexOf(this.path) !== -1
-      },
-      activeStyle() {
-        return this.isActive ? {color: this.activeColor} : {}
-      }
+    activeStyle() {
+      return this.isActive ? { color: this.activeColor } : {};
     },
-    methods: {
-      itemClick() {
-        this.$router.replace(this.path)
-      }
-    }
-  }
+  },
+  methods: {
+    itemClick() {
+      this.$router.replace(this.path);
+    },
+  },
+};
 </script>
 
 <style scoped>
-  .tab-ber-item {
-    flex: 1;
-   text-align: center;
-    height: 49px;
-  }
+.tab-ber-item {
+  flex: 1;
+  text-align: center;
+  height: 49px;
+}
 
-  .tab-ber-item img {
-    width: 24px;
-    height: 24px;
-    margin-top: 3px;
-    margin-bottom: 2px;
-    vertical-align: middle;
-
-  }
+.tab-ber-item img {
+  width: 24px;
+  height: 24px;
+  margin-top: 3px;
+  margin-bottom: 2px;
+  vertical-align: middle;
+}
 </style>

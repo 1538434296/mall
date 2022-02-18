@@ -1,6 +1,6 @@
 <template>
   <swiper>
-    <swiper-item v-for="item in slides" :key="item">
+    <swiper-item v-for="(item, index) in slides" :key="index">
       <a :href="item.goodsId">
         <img :src="item.image" alt="" />
       </a>
@@ -8,7 +8,7 @@
   </swiper>
 </template>
 
-<script>
+<script scoped>
 import { Swiper, SwiperItem } from "components/common/swiper/index";
 export default {
   name: "HomeSwiper",
