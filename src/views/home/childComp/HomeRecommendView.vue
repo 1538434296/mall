@@ -35,7 +35,6 @@ export default {
   background-color: #fff;
   padding: 8px 0;
   margin: 5px 5px 10px;
-
   border-radius: 8px;
 }
 .recommend-item {

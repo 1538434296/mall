@@ -26,6 +26,7 @@ export function getGoodsIDdata() {
 // 读取小类的数据post key:categoryId
 export function getBigCateDdata() {
   return request({
+    mode: 'post',
     url: 'goods/getCategoryList  '
   })
 }

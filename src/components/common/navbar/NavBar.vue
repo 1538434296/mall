@@ -21,7 +21,7 @@
   }
 
   .left, .right {
-    width: 40px;
+    width: 15%;
   }
 
   .center {

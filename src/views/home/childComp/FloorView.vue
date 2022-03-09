@@ -58,7 +58,7 @@ export default {
         return {};
       },
     },
-  }
+  },
 };
 </script>
 
@@ -73,7 +73,7 @@ h3 {
 .floor {
   display: flex;
   width: 100%;
-  height: 270px;
+  height: 292px;
   flex-direction: column;
   flex-wrap: wrap;
   overflow: hidden;
@@ -85,13 +85,14 @@ h3 {
   text-align: center;
   font-size: 0;
 }
+
 .floor-item:nth-child(1) {
   height: 173.8px;
   flex-grow: 2;
 }
 .floor-item img {
-  vertical-align: middle;
-  display: block;
+  /* vertical-align: middle; */
+  /* display: block; */
   width: 100%;
 }
 </style>
