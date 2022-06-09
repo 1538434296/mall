@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <!-- <keep-alive> -->
-    <router-view />
-    <main-tabbar />
-    <!-- </keep-alive> -->
+    <keep-alive>
+    <router-view/>
+    </keep-alive>
+    <main-tabbar  v-if="!$route.meta.showNav" />
   </div>
 </template>
 

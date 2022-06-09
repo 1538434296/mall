@@ -2,8 +2,6 @@ import axios from 'axios'
 
 export function request(config) {
   const instance = new axios.create({
-    //baseURL:'http://123.207.32.32:8000',
-    // baseURL:'http://adi-v3.dev'
     baseURL: 'http://vt.ossjk.com',
     timeout: 5000
   });

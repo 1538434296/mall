@@ -57,7 +57,7 @@
 <script>
 import NavBar from "components/common/navbar/NavBar.vue";
 
-import { getHomeMultidata, getHomeCatedata } from "network/home";
+import { getHomeMultidata } from "network/home";
 
 import HomeSwiper from "./childComp/HomeSwiper.vue";
 import HomeRecommendView from "./childComp/HomeRecommendView.vue";
@@ -409,11 +409,8 @@ export default {
   created() {
     // 1.请求多个数据
     getHomeMultidata().then((res) => {
-      console.log(res, 1);
       this.floorName = res.data.floorName;
-    });
-    getHomeCatedata().then((res) => {
-      console.log(res, 2);
+      console.log(res);
     });
   },
 };
